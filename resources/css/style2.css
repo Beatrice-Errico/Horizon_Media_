@@ -1,0 +1,321 @@
+/* ---------- BASE FONT ---------- */
+body {
+    font-family: Georgia, serif;
+    background: #fff;
+    color: #111;
+}
+
+/* ---------- CARD ARTICOLO (index) ---------- */
+.nyt-card {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #ccc;
+    padding: 30px 0;
+    gap: 40px;
+}
+
+.nyt-card-text {
+    flex: 1;
+}
+
+.nyt-card-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.nyt-card-subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.nyt-meta {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.nyt-author {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.nyt-img-container {
+    width: 350px;
+    max-width: 100%;
+}
+
+.nyt-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.nyt-footer {
+    font-size: 12px;
+    color: gray;
+    margin-top: 8px;
+}
+
+.nyt-tag {
+    display: inline-block;
+    background: #222;
+    color: #fff;
+    padding: 2px 6px;
+    margin-right: 5px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .nyt-card {
+        flex-direction: column;
+    }
+
+    .nyt-img-container {
+        width: 100%;
+    }
+}
+
+/* ---------- LOGIN / REGISTER ---------- */
+.nyt-login-wrapper {
+    max-width: 420px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.nyt-login-title {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.nyt-label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+.nyt-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #111;
+    margin-bottom: 8px;
+    outline: none;
+}
+
+.nyt-button {
+    width: 100%;
+    background: #111;
+    color: #fff;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.nyt-error {
+    font-size: 13px;
+    color: red;
+    text-align: left;
+    margin-top: 4px;
+}
+
+.nyt-footer-link {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #555;
+}
+
+.nyt-footer-link a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ---------- PAGINA ARTICOLO ---------- */
+.nyt-article-wrapper {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.nyt-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.nyt-subtitle {
+    font-size: 20px;
+    color: #555;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.nyt-meta-info {
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.nyt-meta-link {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.nyt-image-container img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.nyt-tags {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nyt-body {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    white-space: pre-line;
+}
+
+.nyt-link {
+    font-size: 14px;
+    text-decoration: underline;
+    color: #111;
+}
+
+/* ---------- ARTICOLI CORRELATI ---------- */
+.nyt-related-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.nyt-related-list li {
+    margin-bottom: 10px;
+}
+
+.nyt-related-list a {
+    color: #111;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+/* ---------- COMMENTI ---------- */
+.nyt-comment-form {
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.nyt-comment {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.nyt-comment p {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.nyt-comment strong {
+    font-weight: bold;
+}
+
+/* ---------- STAMPA ---------- */
+@media print {
+    nav,
+    .btn,
+    .nyt-button,
+    .nyt-link,
+    form,
+    .nyt-tags,
+    .nyt-comment-form,
+    .nyt-comment,
+    .nyt-related-list,
+    .mt-5 {
+        display: none !important;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        color: #000;
+        background: #fff;
+    }
+
+    .nyt-article-wrapper {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nyt-title,
+    .nyt-subtitle,
+    .nyt-body {
+        color: #000 !important;
+    }
+}
+/* BOTTONE MI PIACE */
+
+
+/* Paragrafo Dove Siamo*/
+.ParDove{
+    font-size: 3rem;
+}
+
+.ParHori{
+     font-size: 3rem;
+}
+
+
+/* CHAT ASSISTENZA */
+/* --- Contenitore chatbot migliorato --- */
+
+
+
+
+
+
+
+
+
+
+   
+ /* Transizione pagina */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+  pointer-events: none; /* evita interazioni finché non è visibile */
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+
+
