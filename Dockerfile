@@ -4,6 +4,9 @@ FROM richarvey/nginx-php-fpm:3.1.6
 # Copia tutto il progetto
 COPY . /var/www/html
 
+# Copia configurazione nginx
+COPY nginx/default.conf /etc/nginx/sites-available/default
+
 # Imposta variabili essenziali
 ENV WEBROOT /var/www/html/public
 ENV SKIP_COMPOSER 1
