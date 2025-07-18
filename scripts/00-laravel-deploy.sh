@@ -11,3 +11,5 @@ php artisan migrate --force
 
 # Cache della configurazione
 php artisan config:cache
+
+php artisan db:seed --force
