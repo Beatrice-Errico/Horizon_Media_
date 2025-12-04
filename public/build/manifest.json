@@ -1,0 +1,17 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-C9wjSNM0.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-BzdDFQQK.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "storage/app/public/HorizonMedia.png": {
+    "file": "assets/HorizonMedia-BE4Ekqub.png",
+    "src": "storage/app/public/HorizonMedia.png"
+  }
+}
