@@ -1,19 +1,25 @@
-# Partiamo da un'immagine con PHP 8 e Nginx
-FROM richarvey/nginx-php-fpm:3.1.6
+FROM richarvey/nginx-php-fpm:latest
 
-# Copia tutto il progetto
-COPY . /var/www/html
+# Cartella in cui lavorerà il container
+WORKDIR /var/www/html
 
-# Copia configurazione nginx
-COPY nginx/default.conf /etc/nginx/sites-available/default
+# Copia tutto il progetto dentro al container
+COPY . .
 
-# Imposta variabili essenziali
-ENV WEBROOT /var/www/html/public
-ENV SKIP_COMPOSER 1
-ENV RUN_SCRIPTS 1
-ENV REAL_IP_HEADER 1
-ENV PHP_ERRORS_STDERR 1
-ENV COMPOSER_ALLOW_SUPERUSER 1
+# Config dell'immagine (documentate nell'immagine richarvey/nginx-php-fpm)
+ENV WEBROOT=/var/www/html/public
+ENV RUN_SCRIPTS=1
+ENV PHP_ERRORS_STDERR=1
+ENV REAL_IP_HEADER=1
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
-# Espongo porta 80 (nginx) — Render la mapperà su $PORT
-EXPOSE 80
+# Valori di default (in produzione saranno sovrascritti dalle Env di Render)
+ENV APP_ENV=production
+ENV APP_DEBUG=false
+ENV LOG_CHANNEL=stderr
+
+# Rende eseguibile lo script di deploy di Laravel
+RUN chmod +x ./scripts/00-laravel-deploy.sh
+
+# Script di avvio fornito dall'immagine base (fa partire nginx + php-fpm)
+CMD ["/start.sh"]

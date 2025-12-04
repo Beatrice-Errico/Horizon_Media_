@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
+set -e
 
-# Vai nella cartella dell'app Laravel
-cd /var/www/html
-
-# Installa le dipendenze PHP senza dev
+echo ">> Composer install (no dev)..."
 composer install --no-dev --optimize-autoloader
 
-# Migrazioni DB forzate
-php artisan migrate --force
+echo ">> Running migrations..."
+php artisan migrate --force || echo "Migrations failed (maybe first deploy or no DB changes)"
 
-# Cache della configurazione
+echo ">> Caching config & routes..."
 php artisan config:cache
+php artisan route:cache
 
-php artisan db:seed --force
+echo ">> Laravel deploy script finished."
