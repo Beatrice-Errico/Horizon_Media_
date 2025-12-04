@@ -15,7 +15,20 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        //// Non toccare il DB quando gira in console (deploy, artisan, ecc.)
+    if (app()->runningInConsole()) {
+        return;
+    }
+
+    // Se ti serve davvero controllare la tabella "tags", falla qui dentro
+    try {
+        if (Schema::hasTable('tags')) {
+            // tuo codice qui (se c’era qualcosa legato a tags)
+        }
+    } catch (\Throwable $e) {
+        // opzionale: loggare, ma NON rompere tutto
+        // \Log::error($e->getMessage());
+    }
     }
 
     /**
