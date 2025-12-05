@@ -68,7 +68,7 @@ return view('dove-siamo');
 
 
 
-Route::get('/debug-images', function () {
+Route::get('/', function () {
     return Article::select('id', 'title', 'image')->get();
 });
 
