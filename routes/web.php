@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LikeController;
@@ -64,6 +65,22 @@ Route::post('/articles/{article}/like', [LikeController::class, 'toggle'])->name
 Route::get('/dove-siamo', function () {
 return view('dove-siamo');
 })->name('dove.siamo');
+
+
+
+
+
+Route::get('/fix-images', function () {
+    // SOLO AMBIENTE NON-PROD, ma tanto sei in demo 😅
+    Article::where('image', 'IA.jpg')->update(['image' => 'images/IA.jpg']);
+    Article::where('image', 'Olimpiadi.jpg')->update(['image' => 'images/Olimpiadi.jpg']);
+    Article::where('image', 'Avengers.jpg')->update(['image' => 'images/Avengers.jpg']);
+    Article::where('image', 'Politica.jpg')->update(['image' => 'images/Politica.jpg']);
+    Article::where('image', 'Acaj.jpg')->update(['image' => 'images/Acaj.jpg']);
+    Article::where('image', 'dazi.jpg')->update(['image' => 'images/dazi.jpg']);
+
+    return 'Done';
+});
 
 
 
