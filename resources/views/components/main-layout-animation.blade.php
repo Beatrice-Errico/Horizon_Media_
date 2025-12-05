@@ -64,6 +64,7 @@
     const target = +counter.getAttribute('data-target');
     let count = 0;
     const increment = Math.ceil(target / 100); // velocità
+
     const update = () => {
       count += increment;
       if (count >= target) {
@@ -73,13 +74,16 @@
         requestAnimationFrame(update);
       }
     };
+
     update();
   }
 
-  // Usa IntersectionObserver per far partire il conteggio quando visibile
   document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.counter');
     const section = document.getElementById('counter-section');
+
+    // Se per qualsiasi motivo non esiste, esci in silenzio
+    if (!section || counters.length === 0) return;
 
     let triggered = false;
 

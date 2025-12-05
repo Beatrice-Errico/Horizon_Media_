@@ -1,6 +1,6 @@
 
     <!-- I nostri numeri -->
-   <div class="container mt-0">
+   <div id="counter-section" class="container mt-0">
   <div class="row align-items-center">
     <div class="col-md-12 text-center">
       <h2 class="titolo_ani">I NOSTRI NUMERI:</h2>
