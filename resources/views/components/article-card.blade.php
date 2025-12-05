@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="nyt-img-container">
-                        <img src="{{ asset($article->image) }}" alt="Immagine: {{ $article->title }}" class="nyt-img">
+                        <img src="{{ $article->image_url }}" alt="Immagine: {{ $article->title }}" class="nyt-img">
                         <div class="nyt-footer">via {{ $article->user->name }}</div>
                     </div>
                 </div>

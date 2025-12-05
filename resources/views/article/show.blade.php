@@ -34,7 +34,7 @@
         </div>
 
         <div class="nyt-image-container">
-          <img src="{{ asset($article->image) }}" alt="Immagine: {{ $article->title }}">
+          <img src="{{ $article->image_url }}" alt="Immagine: {{ $article->title }}">
         </div>
 
         <div class="nyt-tags mb-3">

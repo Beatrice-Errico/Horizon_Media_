@@ -69,4 +69,17 @@ public function toSearchableArray(){
         return $this->hasMany(Like::class);
     }
 
+    public function getImageUrlAttribute()
+    {
+        $path = $this->image;
+
+        // Se NON contiene uno slash, lo considero solo nome file e lo metto in /images
+        if (strpos($path, '/') === false) {
+            $path = 'images/' . $path;
+        }
+
+        // Se invece è già tipo "images/IA.jpg" lo lascio così
+        return asset($path);
+    }
+
 }

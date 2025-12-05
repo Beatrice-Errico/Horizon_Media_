@@ -12,7 +12,7 @@
                   <div class="card bg-dark text-white border-0 w-100">
                     <div class="ratio ratio-16x9">
                       <img 
-                        src="{{ asset($article->image) }}"
+                        src="{{ $article->image_url }}"
                         class="card-img-top object-fit-cover"
                         alt="{{ $article->title }}"
                       >
