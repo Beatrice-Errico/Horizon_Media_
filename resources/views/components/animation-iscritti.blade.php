@@ -1,6 +1,5 @@
-
-    <!-- I nostri numeri -->
-   <div id="counter-section" class="container mt-0">
+<!-- I nostri numeri -->
+<div class="container mt-0">
   <div class="row align-items-center">
     <div class="col-md-12 text-center">
       <h2 class="titolo_ani">I NOSTRI NUMERI:</h2>
@@ -29,15 +28,13 @@
 </div>
 
 
-  </div>
+</div>
 </div>
 
- <!-- Mappamondo
+<!-- Mappamondo
     <div class="col-md-4 text-center mb-4 mb-md-0">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Rotating_earth_animated_transparent.gif?20201022124448"
            alt="Mappamondo che gira"
            class="img-fluid" 
            style="max-width: 200px;">
     </div> -->
-
- 

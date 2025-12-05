@@ -10,13 +10,13 @@
 
   <!-- NEWS TICKER PRIMA DI TUTTO IL CONTENUTO -->
   <div class=" nyt-marquee-container mt-5 mb-4 mt-md-5 mb-md-5">
-      <div class="nyt-marquee-track">
-    <span >Le News!</span>
-  </div>
+    <div class="nyt-marquee-track">
+      <span>Le News!</span>
+    </div>
   </div>
 
   <div class="nyt-typewriter-wrapper">
-  <h2 class="nyt-typewriter-text" id="nytHeadline"></h2>
+    <h2 class="nyt-typewriter-text" id="nytHeadline"></h2>
   </div>
 
   <!-- CAROUSEL -->
@@ -48,5 +48,6 @@
       Lavora con noi!
     </a>
   </div>
-    <div class="bgcolor" style="padding-bottom: 200px;"></div>
+
+  <div class="bgcolor" style="padding-bottom: 200px;"></div>
 </x-main-layout-animation>
