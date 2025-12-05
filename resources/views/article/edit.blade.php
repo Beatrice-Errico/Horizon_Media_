@@ -36,7 +36,7 @@
                 {{-- Immagine attuale --}}
                 <div class="mb-3">
                     <label class="form-label">Immagine Attuale:</label>
-                    <img src="{{ Storage::url($article->image) }}" alt="{{ $article->title }}" class="w-50 d-flex">
+                    <img src="{{ asset($article->image) }}" alt="{{ $article->title }}" class="w-50 d-flex">
                 </div>
 
                 {{-- Nuova immagine --}}
