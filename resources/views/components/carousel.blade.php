@@ -1,3 +1,5 @@
+{{-- resources/views/components/carousel.blade.php --}}
+
 <div class="car w-100 my-3">
   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
     <div class="carousel-inner">
@@ -9,9 +11,11 @@
                 <div class="col-12 col-md-6 d-flex">
                   <div class="card bg-dark text-white border-0 w-100">
                     <div class="ratio ratio-16x9">
-                      <img src="{{ asset('storage/' . $article->image) }}"
-                           class="card-img-top object-fit-cover"
-                           alt="{{ $article->title }}">
+                      <img 
+                        src="{{ asset($article->image) }}"
+                        class="card-img-top object-fit-cover"
+                        alt="{{ $article->title }}"
+                      >
                     </div>
                     <div class="card-img-overlay d-flex flex-column justify-content-end p-4"
                          style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
@@ -22,9 +26,12 @@
                   </div>
                 </div>
               @endforeach
+
+              {{-- padding per avere sempre 2 card per slide su desktop --}}
               @for($i = 0; $i < 2 - $chunk->count(); $i++)
                 <div class="col-12 col-md-6 d-none d-md-block"></div>
               @endfor
+
             </div>
           </div>
         </div>

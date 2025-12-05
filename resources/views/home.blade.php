@@ -35,19 +35,23 @@
   <x-animation-iscritti />
 
   <!-- CTA LAVORA CON NOI -->
-  <div class="container my-4 position-relative">
-    <img src="storage/LavoraConNoi.jpg" alt="Lavora con noi" class="img-fluid w-100 rounded shadow" style="max-height: 400px; object-fit: cover;">
+<div class="container my-4 position-relative">
+  <img 
+    src="{{ asset('images/LavoraConNoi.jpg') }}" 
+    alt="Lavora con noi" 
+    class="img-fluid w-100 rounded shadow" 
+    style="max-height: 400px; object-fit: cover;"
+  >
 
-    <div class="position-absolute start-0 top-50 translate-middle-y ps-4">
-      <h2 class="text-white fw-bold shadow-text">
-        Vuoi lavorare con noi?<br>Invia la tua candidatura!
-      </h2>
-    </div>
-
-    <a href="{{ route('careers') }}" class="btn-lavora-bottom-end position-absolute">
-      Lavora con noi!
-    </a>
+  <div class="position-absolute start-0 top-50 translate-middle-y ps-4">
+    <h2 class="text-white fw-bold shadow-text">
+      Vuoi lavorare con noi?<br>Invia la tua candidatura!
+    </h2>
   </div>
 
+  <a href="{{ route('careers') }}" class="btn-lavora-bottom-end position-absolute">
+    Lavora con noi!
+  </a>
+</div>
   <div class="bgcolor" style="padding-bottom: 200px;"></div>
 </x-main-layout-animation>
