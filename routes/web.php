@@ -68,9 +68,9 @@ return view('dove-siamo');
 
 
 
-Route::get('/', function () {
-    return Article::select('id', 'title', 'image')->get();
-});
+// Route::get('/', function () {
+//     return Article::select('id', 'title', 'image')->get();
+// });
 
 
 
